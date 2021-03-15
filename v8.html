@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div >
+    <form>
+        <input type="button" value="Chơi" onclick="play()" id="1">
+    </form>
+
+</div>
+<div>
+    <p id="ud" value="" ></p>
+</div>
+</body>
+</html>
+<script>
+    function play() {
+
+        let a = parseInt(prompt("Nhập số khoảng muốn đoán"))
+        let b =  parseInt(prompt("Nhập số muốn đoán"))
+        let e =  parseInt(prompt("Nhập số muốn đoán"))
+        let u =  parseInt(prompt("Nhập số muốn đoán"))
+        const x = Math.floor(Math.random()*a)
+        console.log(x)
+        if (x===b || x===e || x === u){
+            document.getElementById("ud").innerHTML = "đúng rồi"
+        }else {
+            document.getElementById("ud").innerHTML = "sai rồi"
+        }
+    }
+</script>
